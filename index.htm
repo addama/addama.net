@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset='utf-8' />
@@ -13,20 +13,72 @@
 		<meta name="application-name" content="addama.net">
 		<meta name="theme-color" content="#ffffff">
 		<title>ADDAMA</title>
-		<link rel='stylesheet' type='text/css' media='screen, handheld' href='style.css' />
-		<script type='text/javascript' src='ga.js'></script>
+		<link rel='stylesheet' type='text/css' media='screen, handheld' href='./style.css' />
+		<script type='text/javascript' src='./ga.js'></script>
 	</head>
+	
 	<body>
-		<div id='anchor'>
-			<nav>
-				<a title='Blog' href='http://blog.addama.net'>BLOG</a>
-				<a title='Instagram profile' target='_blank' href='https://www.instagram.com/addama.sanders/'>INSTAGRAM</a>
-				<a title='Twitter profile' target='_blank' href='http://twitter.com/addama'>TWITTER</a>
-				<a title='Steam profile' target='_blank' href='http://steamcommunity.com/id/addama'>STEAM</a>
-				<a title='LinkedIn profile' target='_blank' href='https://www.linkedin.com/in/addama-sanders-179a9881'>LINKEDIN</a>
-				<a title='GitHub profile' target='_blank' href='https://github.com/addama'>GITHUB</a>
-			</nav>
-			<span id='name'>ADDAMA</span>
+		<div id='main'>
+			<div id='overlay'>
+				<!-- <span id='title1' class='title'>ADDAMA</span> -->
+				<span id='title2' class='title'>ADDAMA</span>
+				<!-- <span id='title3' class='title'>ADDAMA</span> -->
+				<nav>
+					<a href='https://www.instagram.com/addama.sanders/'>INSTAGRAM</a>
+					<a href='http://twitter.com/addama'>TWITTER</a>
+					<a href='http://steamcommunity.com/id/addama'>STEAM</a>
+					<a href='https://www.linkedin.com/in/addama-sanders-179a9881'>LINKEDIN</a>
+					<a href='https://github.com/addama'>GITHUB</a>
+					<a href='https://www.pinterest.com/addamasanders/'>PINTEREST</a>
+					<!-- <a href='http://blog.addama.net/'>BLOG</a> -->
+				</nav>
+			</div>
+			<video autoplay loop id="video" muted plays-inline>
+				<source src="./noise.mp4" type="video/mp4">
+			</video>
+			<script type='text/javascript'>
+				(function() {
+					var data = {
+						elements: document.getElementsByClassName('title'),
+						waitMin: 100,
+						waitMax: 1000,
+						bottom: {
+							min: -10,
+							max: 10,
+						},
+						left: {
+							min: -10,
+							max: 10,
+						},
+						timers: []
+					}
+					function random(min, max) {
+						return Math.floor(Math.random()*(max-min+1)+min);
+					}
+					/*
+					function move(element) {
+						//for (var i = 0, l = data.elements.length; i < l; i++) {
+							var bottom = random(data.bottom.min, data.bottom.max),
+								left = random(data.left.min, data.left.max);
+							element.style.bottom = bottom + 'vh';
+							element.style.left = left + 'vw';
+						//}
+					}
+					
+					function makeTimer(element) {
+						return setInterval(function() {
+							move(element);
+						}, random(data.waitMin, data.waitMax))
+					}
+					
+					function setup() {
+						for (var i = 0, l = data.elements.length; i < l; i++) {
+							data.timers.push(makeTimer(data.elements[i]));
+						}
+					}
+					setup();*/
+				})()
+			</script>
 		</div>
 	</body>
 </html>

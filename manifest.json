@@ -1,5 +1,7 @@
 {
-    "name": "addama.net",
+    "lang": "en",
+	"dir": "ltr",
+	"name": "addama.net",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
