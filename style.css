@@ -48,15 +48,13 @@ a:hover {
 	filter: blur(0);
 }
 
-.title {
+#title {
 	position: fixed;
 	bottom: -10vh;
 	left: 10vw;
-	/* cursor: default; */
-	/* color: rgba(125, 100, 100, 0.25); */
+	color: rgba(0, 0, 0, 0.75);
 	font-size: 20vw;
 	font-family: "Arial Black", Gadget, sans-serif;
-	/* font-family: 'font'; */
 	font-weight: 900;
 	-webkit-filter: blur(30px);
     filter: blur(30px);
@@ -66,22 +64,7 @@ a:hover {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-
-}
-
-#title1 {
-	color: rgba(100, 100, 125, 0.25);
-	z-index: -1
-}
-
-title2 {
-	color: rgba(100, 125, 100, 0.95);
 	z-index: -1;
-}
-
-#title3 {
-	color: rgba(125, 100, 100, 0.25);
-		z-index: -1
 }
 
 #video {
