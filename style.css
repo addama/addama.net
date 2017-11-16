@@ -30,6 +30,12 @@ nav {
 	margin: 0 auto;
 	padding: 10vh 2vw;
 	color: white;
+	text-align: right;
+	/*
+	-ms-transform: rotate(2deg);
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+	*/
 }
 
 a {
