@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8' />
+		<meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0' />
+		<meta name='description' content='GURPS implementation of Basketball' />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/manifest.json">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="apple-mobile-web-app-title" content="GURPS Basketball | addama.net">
+		<meta name="application-name" content="GURPS Basketball | addama.net">
+		<meta name="theme-color" content="#222">
+		<title>GURPS Basketball | ADDAMA</title>
+		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+		<link rel='stylesheet' type='text/css' media='screen, handheld' href='./style.css' />
+		<script type='text/javascript' src='./ga.js'></script>
+	</head>
+	
+	<body>
+		<div id='banner'>
+			<a href='http://addama.net'>⬅ addama.net</a>
+		</div>
+
+		<div id='main'>
+		
+		<section>
+			<a id='top'></a>
+			<h1>GURPS Basketball Supplement</h1>
+
+			<p>This is an attempt to provide a framework in GURPS that will allow players to play Basketball. Wherever possible, the base GURPS skills, advantages, etc, will be used, although they may be amended or renamed to better suit a Basketball-related environment.</p>	
+			
+			<p>Rather than attempt to transcribe the entirety of the sport into this supplement, some of the finer details and rules have been purposefully left out. After all, the point is to roleplay an epic game of Basketball, not get bogged down by minute details. However, if you are experienced with the rules of Basketball, you are encouraged to expand upon this supplement and develop more accurate house-rules.</p>
+		</section>
+		
+		<!----------------------------->
+		<!-- BASICS ------------------->
+		<!----------------------------->
+		<section>
+			<h1>Basketball Basics</h1>
+
+			<p>Basketball is a ball sport played by two teams. Each team must have five players on the court, and may optionally have up to two extra players that can be rotated into play should an active player become hurt or is not performing as the team would like. Basketball may also be played with three players on the court from each team, though the court is usually much smaller.</p>
+
+			<p>Basketball is played in Quarters of ten minutes each. If there is a tie at the end of the game, additional five minute periods are played until the tie is broken.</p>
+
+			<p>Central to Basketball is the idea of a Shot Clock. When a team has possession of the ball, they have 24 seconds to make a basket. If they do not, they lose control of the ball and the other team has their own 24 seconds to attempt a score. Additionally, the team in possession of the ball has five seconds to move the ball into their opponent's half of the court, or they will similarly lose ball control. Once the ball has been moved into the opponent's half of the court, it may not move back into the possessing team's half.</p>
+
+			<p>When a player gains possession of the ball, they must either remain still with it while deciding what to do, or they may move once, either one to two steps in any direction, or a longer distance while dribbling the ball. Dribbling is bouncing the ball while walking or running. Any further attempts at movement incur a penalty. Possession of the ball should realistically be fleeting.</p>
+
+			<p>Players may only touch the ball with their hands, and may not touch other players except incidental hip, leg, elbow, etc, touches. The judges (or GM) decide if an interaction between players is malicious or illegal. Attempting to get away with illegal personal contact may be a facet of your roleplaying.</p>
+
+			<p>The ball is primarily moved toward the hoop by Passing between teammates. Players should always be moving to make themselves available to be passed to, and to make their passes more successful. Additionally, at any time, a player who has possession of the ball may attempt to throw the ball in an arc toward the hoop. If at any time the ball goes through the hoop, that is counted as a score.</p>
+
+			<p>Scoring is relatively simple. If a successful shot is made within the half-circle around the hoop, that shot is worth 2 points. Any shot made outside that half-circle is worth 3 points. Additionally, fouls and violations are "repayed" to the wronged team by allowing them to attempt a given number of "free throws", which are worth 1 point each from the free throw line.</p>
+
+			<p>All Basketball players are trained in all basic aspects of Basketball. There are positions in Basketball, but these are largely used to categorize a player's skills, and to strategically position players on the court based on those skills, rather than an expression of their responsibilities in the game. These positions are:</p>
+			<ul>
+				<li><strong>Point Guard</strong> (PG) - Best handling and passing skills, also generally the leader of the team.</li>
+				<li><strong>Shooting Guard</strong> (SG) - Best shooting skills, especially at distance.</li>
+				<li><strong>Small Forward</strong> (SF) - Versatile, aggressive, and quick.</li>
+				<li><strong>Power Forward</strong> (PF) - Supports the team by blocking shots and being good at shooting at medium-close range.</li>
+				<li><strong>Center</strong> (C) - Similar to the Power Forward, but generally taller, and better at scoring from close to the hoop.</li> 
+			</ul>
+			
+			<strong>Some basic assumptions and facts:</strong>
+			<ul>
+				<li>The Basketball court is 31.3 yards by 16.6 yards.</li>
+				<li>The basketball is a spherical thrown weapon that weighs 1.375 pounds, but for the sake of realism, a GURPS basketball weighs 2 pounds.</li>
+				<li>The backboard is 2 yards wide, 1.5 yards tall, and 3.3 yards off the ground.</li>
+				<li>The hoop is 18 inches in diameter.</li>
+				<li>Players are never encumbered by their equipment or the ball.</li>
+				<li>The ball is always considered ready.</li>
+				<li>Shots are always an arc, with the highest point in the center of that arc.</li>
+				<li>Passes may either be a direct throw or a bounce pass, where the bounce occurs in the center of the distance.</li>
+				<li>Players are never in a situation where they are using the ball in their off-hand, unless dictated by roleplaying. Both hands are often used anyway.</li>
+			</ul>
+		</section>
+		<!----------------------------->
+		<!-- SKILLS ------------------->
+		<!----------------------------->
+		<section>
+			<a id='skills'></a>
+			<h1>Skills</h1>
+
+			<p>While other base skills may be applicable, the following are relevant to playing Basketball as outlined in this supplement.</p>
+			<div class='columns'>
+				<div class='item'>
+					<a id='skill_sports'></a>
+					<span class='skillTitle'>Sports(Basketball) (Physical/Average)</span>
+					<span class='skillDefault'>Defaults to DX-5</span>
+					<p>This skill represents training in the sport of Basketball. All professional rookie Basketball players have this skill trained to at least DX+0 through a combination of past experience and training. This skill is important when determining experience with the game and its rules, especially in contests between two players.</p>
+				</div>
+				
+				<div class='item'>
+					<a id='skill_history'></a>
+					<span class='skillTitle'>History(Basketball) (Mental/Hard)</span>
+					<span class='skillDefault'>Defaults to Sports(Basketball)-6 or IQ-6</span>
+					<p>This skill represents the study of Basketball throughout history. A Basketball history buff might be able to recall scores from specific games, or what team a player was on for a given season, as well as player and season statistics.</p>
+				</div>
+
+				<div class='item'>
+					<a id='skill_basketball'></a>
+					<span class='skillTitle'>Basketball (Physical/Easy)</span>
+					<span class='skillDefault'>Defaults to Sports(Basketball)-3 or DX-5</span>
+					<p>This is the skill of ball handling, to include dribbling, staying in possession of the ball, and gaining possession of it through Interception or Stealing. All professional rookie Basketball players have this skill trained to at least DX+0 through a combination of past experience and training.</p>
+					<p>This skill is primarily used when your skill at manipulating the ball in close-quarters (i.e. not thrown) are in question.</p>
+				</div>
+				
+				<div class='item'>
+					<a id='skill_throw'></a>
+					<span class='skillTitle'>Basketball Throwing (Physical/Average)</span>
+					<span class='skillDefault'>Defaults to Weapon(Basketball)-4 or Sports(Basketball)-5</span>
+					<p>This is the skill of throwing the basketball, either when passing it to another player or shooting it at the hoop. All professional rookie Basketball players have this skill trained to at least DX+0 through a combination of past experience and training.</p>
+				</div>
+
+				<div class='item'>
+					<a id='skill_tricks'></a>
+					<span class='skillTitle'>Basketball Tricks (Mental/Very Hard)</span>
+					<span class='skillDefault'>Defaults to Sports(Basketball)-5</span>
+					<p>This is the skill of performing flashy and impressive tricks with the basketball. Ranks in this skill represent familiarity and practice doing tricks in general, but no focus on any specifically. This skill governs any action the GM (or player) determines to require more skill than just basic ball handling or throwing would cover. The GM may also require a Tricks roll for anything flashy, cocky, tricky, risky, or unprofessional. For example, if you attempt to rebound the ball off of your opponent's chest before shooting, that definitely qualifies as a trick.</p>
+					<p>You may specialize in specific tricks and use that skill instead.</p>
+				</div>			  
+			</div>
+		</section>
+		
+		<!----------------------------->
+		<!-- ADVANTAGES --------------->
+		<!----------------------------->
+		<section>
+			<a id='advantages'></a>
+			<h1>Advantages</h1>
+
+			<p>While other advantages may be applicable, these are relevant to real-life Basketball players. The GURPS base advantages are used whenever possible, though some may be renamed or amended specifically for Basketball. Specifically, you may want to consider these base Advantages:</p>
+			<ul>
+				<li>Common Sense</li>
+				<li>Toughness</li>
+				<li>High Pain Threshold</li>
+				<li>Rapid Healing</li>
+				<li>Luck</li>
+			</ul>
+			
+			<div class='columns'>
+				<div class='item'>
+					<div class='header'>
+						<span class='title'>Slippery</span>
+						<span class='points'>-15 points</span>
+					</div>
+					<p>You are particularly adept at maintaining possession of the ball, and have spent time training against Steal attempts. You gain a +1 bonus to defense rolls against Stealing.</p>
+				</div>
+
+				<div class='item'>
+					<div class='header'>
+						<span class='title'>Sticky Fingers</span>
+						<span class='points'>-15 points</span>
+					</div>
+					<p>You enjoy the rush of a successful steal, ripping (or gently nudging) the ball out of someone's unsuspecting hands. Gain a +1 bonus to Steal rolls.</p>
+				</div>
+
+				<div class='item'>
+					<div class='header'>
+						<span class='title'>Quick</span>
+						<span class='points'>-10 points</span>
+					</div>
+					<p>You've always been quick on your feet, so the game's running requirements pose little challenge to you. You always win Speed, Move, and Initiative related ties while playing Basketball.</p>
+				</div>
+
+				<div class='item'>
+					<div class='header'>
+						<span class='title'>Court King</span>
+						<span class='points'>-30 points</span>
+					</div>
+					<p>You are a paragon of the dunk, a master of airtime, and a star on the court. Treat all Shots at the basket as if they were 2 yards shorter. Gain a +1 bonus to any <em>Basketball Tricks</em> roll.</p>
+				</div>
+
+				<div class='item'>
+					<div class='header'>
+						<span class='title'>Team Player</span>
+						<span class='points'>-15 points</span>
+					</div>
+					<p>Whether your shot game is weak or you just value the power of teamwork, you excel at moving the ball and assisting your team. Gain a +1 bonus to any Pass roll.</p>
+				</div>
+
+				<div class='item'>
+					<div class='header'>
+						<span class='title'>High School MVP</span>
+						<span class='points'>-5 points</span>
+					</div>
+					<p>Your high school team would never have gotten as far as they did without you - even the local news took note of your skill. Gain a +1 bonus to Basketball-related Reputation rolls.</p>
+				</div>
+
+				<div class='item'>
+					<div class='header'>
+						<span class='title'>College MVP</span>
+						<span class='points'>-10 points</span>
+					</div>
+					<p>No fan of college basketball can talk about your team without mentioning your name specifically, and your performance garnered attention of scouts at every game. You gain a +2 bonus to Basketball-related Reputation rolls.</p>
+				</div>
+
+				<div class='item'>
+					<div class='header'>
+						<span class='title'>Training Regimen</span>
+						<span class='points'>-15 points</span>
+					</div>
+					<p>You are disciplined, dedicated, and have a strict training regime to follow between games. If using Time Use Sheets, your total hours spent studying Basketball-related skills is increased by 10%. Additionally, your time spent studying Basketball skills must be over 50% of your out of game time.</p>
+				</div>
+
+				<div class='item'>
+					<div class='header'>
+						<span class='title'>Quick Recovery</span>
+						<span class='points'>-15 points</span>
+					</div>
+					<p>You are able to quickly recover from normal Basketball injuries (pending GM intervention) and get back into the game. If you are out of the game because of an injury (See Basketball Injuries table), make a Health check during your turn to determine if you can return to play early.</p>
+				</div>
+			</div>
+		</section>
+		<!----------------------------->
+		<!-- Disadvantages ------------>
+		<!----------------------------->
+		<section>
+			<a id='disadvantages'></a>
+			<h1>Disadvantages</h1>
+
+			<p>In addition to the new Disadvantages below, the following base Disadvantages should be considered:</p>
+			<ul>
+				<li>Gigantism</li>
+				<li>Hard of Hearing</li>
+				<li>Bad Temper</li>
+				<li>Combat Paralysis</li>
+				<li>Gullible</li>
+				<li>Overconfidence</li>
+				<li>Unluckiness</li>
+				<li>Bad Sight/TL5+</li>
+				<li>Low Pain Threshold</li>
+				<li>Bully</li>
+			</ul>
+			
+			<div class='columns'>
+				<div class='item'>
+					<div class='header'>
+						<span class='title'>Rulebreaker</span>
+						<span class='points'>+5/+10/+15 points</span>
+					</div>
+					<p>You have an impulse to bend the rules, to go that little extra bit into foul territory just to see if you can. Whenever you make a Maneuver while in possession of the ball, or on any attempt to Steal, make a Will roll with -2, -3, or -4 modifier depending on ranks taken. If you fail, you cause a Personal Foul on yourself. If you critically fail, you injure the other player and potentially yourself. See Basketball Injuries table.</p>
+				</div>
+
+				<div class='item'>
+					<div class='header'>
+						<span class='title'>Selfish</span>
+						<span class='points'>+15 points</span>
+					</div>
+					<p>Exclusive with Team Player Advantage.</p>
+					<p>You're not here to pass the glory on to your teammates - you're here to get the ball, get big, and get signed. You have a -3 penalty to Passing and Assisting. In fact, you probably would never want to Pass or Assist anyway.</p>
+				</div>
+			</div>
+		</section>
+		<!----------------------------->
+		<!-- MANEUVERS AND MECHANICS -->
+		<!----------------------------->
+		<section>
+			<a id='mechanics'></a>
+			<h1>Maneuvers and Mechanics</h1>
+			
+			<p>These maneuvers are either new, or base maneuvers flavored for Basketball. Many base maneuvers don't necessarily apply to playing a game of basketball, but these are an attempt to stay as close to those base maneuvers as possible while staying true to how players handle and move the ball. Not mentioned are snapshots, but those could potentially be a factor in your play, especially as the shot clock ticks down.</p>
+			
+			<a id='movement'></a>
+			<strong>Movement</strong>
+			<p>Movement and ball possession are deeply intertwined. Whenever you are in possession of the ball, you:</p>
+			<ul>
+				<li>Must do <em>something</em> with the ball within 5 seconds/turns,</li>
+				<li>Can make only one movement maneuver within those 5 seconds/turns,</li>
+				<li>Must make a Basketball skill check when making a Move maneuver if your Basketball skill is DX-1 or lower to see if you successfully dribble the entire way, or if you are in a situation where the GM determines your ball handling skills are in question,</li>
+				<li>May make <em>Step and Shoot</em> or <em>Step and Pass</em> maneuvers without making a dribble check.</li>
+			</ul>
+			<p>During a Move maneuver, any player whose hex you run through may make a Basketball-3 check to see if they steal the ball from you, or otherwise cause you to lose ball control.</p>
+			<p>Once you have moved while in possession of the ball, you cannot move again, and must stay in one spot. While planted, you can change facing.</p>
+			
+			<a id='guarding'></a>
+			<strong>Guarding</strong>
+			<p>Whenever you are not in possession of the ball, you are eligible to <em>Guard</em> your opponents. You are guarding if you are:
+			<ul>
+				<li>Within 1 yard/hex (or if not using the grid, if you are within arm's reach) of an opponent, <strong>and</strong></li>
+				<li>Facing that opponent, <strong>or</strong> facing the same direction as them, <strong>and</strong></li>
+				<li>Not directly behind them</li>
+			</ul>
+			<p>If the opponent you are Guarding fulfills these conditions, you are also being Guarded.</p>
+			<p>Guarding gives a -2 penalty to all Basketball, Throwing, and Trick rolls.</p>
+
+			<a id='passing'></a>
+			<strong>Passing</strong>
+			<p>Passing the ball is a vital function in the game, and it is almost always necessary to move the ball forward toward and eventual score. You attempt to throw the ball directly to a teammate for them to catch. In order to make a successful Pass, your teammate must be under half of your basketball throw distance, and there must be no opponents in a straight line between you and your teammate. Make a Throwing roll to successfully pass. Your teammate must make a Basketball check to ensure they caught the ball. Any Guarding status penalties apply to both checks.</p>
+
+			<p>You may instead choose to make a Bounce Pass, which is the same as a normal Pass, but has a bounce in the center of the travel path. Bounce Passes may be done when opponents are in the line of the pass. Each opponent between you and your teammate that the ball would pass through may make an Intercept check to gain control of the ball.</p>
+
+			<a id='shooting'></a>
+			<strong>Shooting</strong>
+			<p>At any time, you may throw the ball in an arc at the hoop to attempt a score. You may attempt a shot anywhere up to your full basketball throw distance by rolling a Throwing check, but incur a -1 penalty for each yard past 1/4th of your throw distance. The first opponent in a straight line between you and the hoop may make an Intercept check to gain control of the ball.</p>
+			
+			<p>As per the base combat rules, you may also Step and Shoot.</p>
+
+			<a id='freethrow'></a>
+			<strong>Free Throws</strong>
+			<p>Free Throws are awarded to a team when:</p>
+			<ul>
+				<li>A foul is made against a player attempting to make a shot,</li>
+				<li>A team has made 5+ fouls in a single quarter,</li>
+				<li>A player, coach, or staff member displays unsportsmanlike conduct,</li>
+				<li>A player incurs a foul that is particularly aggressive, dangerous, or aggregious.</li>
+			</ul>
+			<p>If any of these criteria are met, the wronged team is awarded between 1 and 3 Free Throws to make up for potentially lost points because of the infractions. The number of Free Throws awarded are:</p>
+			<ul>
+				<li>3 for shots that would have awarded 3 points (beyond the 3 point line),</li>
+				<li>2 for other shots (inside the 3 point line),</li>
+				<li>2 for too many fouls in a quarter,</li>
+				<li>2 for flagrant fouls,</li>
+				<li>1 for technical fouls</li>
+			</ul>
+			<p>When making a Free Throw, play is stopped, and the teams line up on either side of the key. The wronged player stands on the Free Throw line and makes a Throwing check to attempt the shot(s). The standing players may attempt to help the ball into the hoop once the ball has left the shooter's hands. If the standing players move too early, they incur a Lane Violation.</p>
+			
+			<a id='feint'></a>
+			<strong>Feint</strong>
+			<p>Feinting in Basketball is slightly different than in the base combat system, but nonetheless still very similar. When you are in possession of the ball, you may attempt a Feint maneuver on someone that is Guarding you. If you succeed, you are no longer in Guarded status (from that specific target) for the remaining time you hold the ball.</p>
+			
+			<a id='waitpass'></a>
+			<strong>Wait for Pass Opportunity</strong>
+			<p>Similar to Opportunity Fire in the base combat rules, you may choose to wait until a teammate moves into a more favorable Passing position by doing the Step and Wait maneuver, then following the Opportunity Fire rules as normal. You may wait until your last turn, which is a maximum of 5. On your last turn, you have to do something with the ball or incur a penalty. While waiting for a pass opportunity, you have a -1 penalty against Stealing.</p>
+
+			<a id='stealing'></a>
+			<strong>Stealing</strong>
+			<p>If you are Guarding the player who has possession of the ball, you may make a Basketball contested roll against them with a -2 penalty to attempt to gain possession of the ball.</p>
+
+			<a id='assisting'></a>
+			<strong>Wait and Assist</strong>
+			<p>If you are in the "key" area of the court, within one hex of the basket, you may forego your turn and wait until a teammate attempts a shot. If a teammate would make a shot while you are Assisting, that shot gains a +1 bonus to its Throwing roll. If the ball is Intercepted along the way... well, that sucks. Only one player may apply their Assisting bonus to any shot.</p>
+
+			<a id='intercept'></a>
+			<strong>Intercept</strong>
+			<p>If the ball passes in front of or over you, you may make a Basketball check with a -3 penalty to attempt to gain possession of the ball. Critical failures send the ball bouncing away in a random direction.</p>
+
+			<a id='dunking'></a>
+			<strong>Dunking</strong>
+			<p>If you have trained the Basketball Tricks or Basketball Tricks (Dunking) skills, you may attempt a Dunk maneuver. To do a dunk, you must be within a third of your Jumping skill, rounded down, in yards from the hoop. If you have ran at least half of your Move distance prior to making the Jump attempt, you may jump when you are within half of your Jumping skill in yards. Of course, you can dunk from up-close to the hoop as well, but what's the fun in that?</p>
+
+			<p>Roll a successful Basketball Tricks (or relevant specialization) check and roleplay your Dunk. If you fail your Dunk check, roll a Basketball check with a -3 penalty to determine if you succeed on a rebound. One teammate that is Assisting may contribute their bonus to this check. If you fail on the rebound check, the ball bounces off of the headboard in a random direction.</p>
+
+			<p>If the Dunk is critically successful, the GM may optionally decide that the backboard has shattered, particularly if the dunk was amazing and well-roleplayed. While backboard shattering is cool looking, it does incur a Technical Foul, and the player will be fined for destroying equipment and endangering others with shards of flying glass.</p>
+		</section>
+		
+		<!----------------------------->
+		<!-- APPENDIX ----------------->
+		<!----------------------------->
+		<section>
+			<a id='appendix'></a>
+			<h1>Appendix</h1>
+
+			<!----------------------------->
+			<!-- COURTs ------------------->
+			<!----------------------------->
+			<a id='courts'></a>
+			<h2>Basketball Courts</h2>
+			<p>Because the placement of individual lines on the court is a bit too fine for GURPS hexes, the only appreciable difference in the court is its size. The rules in this system were made assuming the NBA court sizing. However, if you want to play a high school campaign, or an Olympic Basketball team, you will need to change the size of the court.</p>
+			
+			<ul>
+				<li><strong>NBA</strong>: 94x50 feet, or 31.3x16.6 yards</li>
+				<li><strong>FIBA</strong>: 92x49 feet, or 30.6x16.3 yards</li>
+				<li><strong>High School</strong>: 84x50 feet, or 28x16.6 yards</li>
+				<li><strong>Middle School</strong>: 74x42 feet, or 24.6x14 yards</li>
+				<li><strong>FIBA 3x3</strong>: 49.2x36 feet, or 16.4x12 yards</li>
+			</ul>
+			
+			<p>Below is an example NBA-sized Basketball court hex map. You can of course draw your own.</p>
+			
+			<a href='./img/court.png'><img src='./img/court.png' /></a>
+			
+			<!----------------------------->
+			<!-- INJURIES ----------------->
+			<!----------------------------->
+			<a id='injuries'></a>
+			<h2>Injuries</h2>
+
+			<p>Unlike normal combat situations, a single injury in Basketball can be enough to remove you from the game. Game Masters should decide whether to treat injuries realistically, or as damage against Health like normal. In any case, the player may receive damage from interactions with other players or their own incompetence. There are only a handful of injuries normally sustained, which are listed below. If the situation calls for a greater injury, such as a concussion, that should be decided by the GM.</p>
+			
+			<p>During normal play, injuries are actually pretty rare. Generally an injury will occur when attempting something risky, fast, or cocky. Making a fast break around a guard, attempting and critically failing a dunk, critically failing an attempt to steal... these kinds of actions are prime avenues for both glory and injury.</p>
+
+			<p>The most common injuries are to the ankles, knees, and hips. Older players who have been around a while may be more prone to injury due to wear and tear on their bodies. Players may also experience bruising and scraping from normal play. You may use the table below to roll random common injuries.</p>
+			
+			<table id='table_injuries'>
+				<tr>
+					<th>ROLL (1d)</th>
+					<th>INJURY</th>
+					<th>DAMAGE</th>
+					<th>LEAVE GAME?</th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Sprained Ankle</td>
+					<td>1d</td>
+					<td>1 Quarter</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Dislocated Knee</td>
+					<td>1d-1</td>			
+					<td>5 Rounds</td>
+				</tr>
+				<tr>
+					<td>3-4</td>
+					<td>Hip Strain</td>
+					<td>1d-1</td>
+					<td>No</td>
+				</tr>
+				<tr>
+					<td>5-6</td>	
+					<td>Bruising</td>
+					<td>1</td>
+					<td>No</td>
+				</tr>
+			</table>
+
+			<!----------------------------->
+			<!-- VIOLATIONS AND FOULS ----->
+			<!----------------------------->
+			<h2>Basketball Violations and Fouls</h2>
+			
+			<p>As a generalization, Basketball has two categories of rulebreaking: violations and fouls. Violations are given when the player is not following the established rules of the game, while Fouls are given when a player makes illegal contact with another player or exhibits unsportsmanlike conduct.</p>
+
+			<p>Below are generic descriptions of Basketball violations and fouls. Having greater knowledge of the game can help to clarify or expand some of these to be more accurate. However, if all you have are these descriptions, they should suffice for your session.</p>
+			
+			<strong>Violations</strong>
+			<ul>
+				<li><strong>Traveling</strong>: Not dribbling while moving is a Traveling violation.</li>
+				<li><strong>Double Dribble</strong>: You can only dribble once while in possession of the ball. Stopping the dribble and starting it again for any reason is a Double Dribble violation.</li>
+				<li><strong>Three Seconds</strong>: Staying more than 3 seconds within the key area while on offense is a Three Seconds violation.</li>
+				<li><strong>Ten Seconds</strong>: The offense has 10 seconds to get the ball from their half of the court into the opponent's half. Not accomplishing this is a Ten Seconds violation.</li>
+				<li><strong>Over and Back</strong>: Once the offense has taken the ball into the defender's side of the court, taking the ball back into their half is an Over and Back violation.</li>
+				<li><strong>Palming</strong>: Placing the hand underneath the ball, or carrying it in any way is a Palming or Carrying violation.</li>
+				<li><strong>Lane Violation</strong>: Leaving the lane lines early during a free throw shot is a Lane Violation.</li>
+				<li><strong>Kicking</strong>: Intentionally kicking the ball or using any kind of intentional leg contact with the ball is a Kicking violation. The key word here is <em>intentional</em>.</li>
+				<li><strong>Goaltending</strong>: Interfering with the ball or touching the net or rim while the ball is being shot is a Goaltending violation.</li>
+				<li><strong>Out of Bounds</strong>: Not strictly a penalty-worthy violation, an Out of Bounds violation happens when the ball touches the ground out of bounds.</li>
+			</ul>
+			
+			<strong>Fouls</strong>
+			<ul>
+				<li><strong>Blocking</strong>: Using your body to prevent another player from moving is a Blocking foul.</li>
+				<li><strong>Hand Check</strong>: Using your hands to prevent another player to prevent or slow another player from moving is a Hand Check foul.</li>
+				<li><strong>Holding</strong>: Grabbing onto another player is a Holding foul.</li>
+				<li><strong>Illegal Use of Hands</strong>: A catch-all foul used when the referee thinks a player's use of their hands was illegal.</li>
+				<li><strong>Charging</strong>: When a player has possession of the ball and runs into a player that has stopped moving, therefore are in their defensive position, that is a Charging foul.</li>
+				<li><strong>Over the Back</strong>: Jumping over someone's back to reach for a ball is a Over the Back foul.</li>
+				<li><strong>Technical Foul</strong>: Fighting, unsportsmanlike conduct, or arguing with the referree can incur a Technical Foul. Depending on the severity, or the chance of people getting hurt, the player may be ejected from the game.</li>
+			</ul>
+
+			<strong>Penalties</strong>
+			<p>Generally, if a foul or violation happens that involves shooting the ball, Free Throws are awarded to the wronged team. Non-shooting infractions generally cause the team to lose possession of the ball.</p>
+			<p>If a player accumulates 6 fouls over the course of a game, they are ejected.</p>
+			<p>If a team accumulates more than 4 fouls in a quarter, Free Throws are awarded to the other team.</p>
+			<p>See Free Throws for more information.</p>
+
+			
+			<!----------------------------->
+			<!-- RULE CHANGES ------------->
+			<!----------------------------->
+			<h2>Rule Changes</h2>
+
+			<p>To simplify the game and/or to make it more fast-paced, consider any of the following changes:</p>
+			<ul>
+				<li><strong>Easier Passing</strong>: Passing simply requires a Throw check. The recieving teammate is assumed to be able to catch it if the throw is good.</li>
+				<li><strong>Easier Dunks</strong>: Dunking is automatically successul if any other players are Assisting, skipping the Rebound check.</li>
+			</ul>
+			
+			<p>To make play more complicated, take more time, or increase realism, consider any of the following changes:</p>
+			<ul>
+				<li><strong>Rookie Penalty</strong>: For any player whose skills are at DX+0/MT+0 or less, have them roll against History(Basketball) (for mental skills) or Sports(Basketball) (for physical skills) to determine if they maintain control of the ball.
+				<li><strong>Earn Your Dunk</strong>: To execute a Dunk maneuver, each of the 3 phases must succeed their rolls: the run (Running), the jump (Jumping), and the dunk (Basketball Tricks). The Run phase has a -2 penalty for each opponent passed during the run. The Jump phase has a -2 penalty if the Jump is made in a hex adjacent to an opponent. The Dunk phase has a -3 penalty if any opponents are within 1 hex of the hoop.
+				<li><strong>Injuries Are Meaningful</strong>: Being dealt one injury sends the player out of the game for at least one Quarter. At the end of that quarter, the player may roll a Health check to return to play. While this player is out, the team may sub someone in, otherwise they must play short-manned.
+				<li><strong>Unlimited Interceptions</strong>: Any opponent in a straight line between you and your intended Throwing target, may roll to Intercept, not just the first.
+			</ul>
+			
+			<h2>Adventures</h2>
+			<p>So what can you do with this supplement? Of course, you can play a game of Basketball; but this is a roleplaying game, remember? Consider the following adventure suggestions:</p>
+			<ul>
+				<li><strong>The Rookies</strong>: Young upstarts just drafted out of college find themselves in an already well-oiled machine that they must fit themselves into. Is the coach an asshole, or is he teaching them a lesson they need to learn? What do they need to do to prove themselves to the oldheads?</li>
+				<li><strong>The Rivalry</strong>: Everyone knows our rival team cheats during their games - but how can we prove it? Do they have a referee on the books? We'll need to either expose them or beat them at their own game!</li>
+				<li><strong>The Rebound</strong>: Our team is on the down-and-outs. Worst in the league, mocked by our fans and peers alike! But an infusion of talent, attitude, and training will make all the difference on our road to being number one.</li>
+				<li><strong>The Rescue</strong>: One of your friends accepted a challenge to play a Basketball game to settle an old score - now he needs to put together a team to preserve his honor.</li>
+				<li><strong>The Revival</strong>: A star on the court returns to his hometown to find that the up-and-comers are a bit lackluster, or lacking entirely! Can the love of the sport be renewed in this small neighborhood?</li>
+			</ul>
+			
+		</section>
+		
+		<section>
+			<h1>To Do</h1>
+			<p>I'm not 100% sure I'll get to these, but these would be the next features and mechanics to add:</p>
+			<ul>
+				<li><strong>Equipment</strong>: There aren't many items to be used in the game, but some, such as ankle wraps, are realistic and could be easily defined.</li>
+				<li><strong>Coaches</strong>: This would be an entire new kind of character with its own skills, advantages, and mechanics. Mostly based on Leadership.</li>
+				<li><strong>Tournament Ladders</strong>: This would mostly just be a beginner-friendly description of how a ladder works. Maybe with appropriate team rewards?</li>
+				<li><strong>Contracts</strong>: Drafting, negotiating contracts, etc. </li>
+				<li><strong>Brand Deals</strong>: This might be something like a Benefactor from the base set, although I'm not sure.</li>
+			</ul>
+			
+			<h1>Version History</h1>
+			<p>20181001: Original conception. Seems like lots of people want a Basketball roleplaying system, but few have attempted or published one.</p>
+			<p>20181002: v0.1 - Lots of research into GURPS, Basketball, and prior attempts to codify all kinds of sports into different roleplaying systems.</p>
+			<p>20181008: v0.9 - Changing from .md format to a proper HTML page so it can be hosted publicly.</p>
+			<p>20181009: v1.0 - Styling complete, as well as a few late additions and corrections.</p>
+		</section>
+	</div>
+	</body>
+</html>
