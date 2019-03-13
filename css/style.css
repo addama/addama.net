@@ -204,11 +204,11 @@ figcaption {
 }
 
 .iconPDF {
-	background-image: url(../inc/ss_resume_pdf.png);
+	background-image: url(../inc/ss_resume_pdf_thumb.png);
 }
 
 .iconTXT {
-	background-image: url(../inc/ss_resume_txt.png);
+	background-image: url(../inc/ss_resume_txt_thumb.png);
 }
 
 p {
