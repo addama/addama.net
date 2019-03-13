@@ -1,0 +1,82 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #000;
+	background: url(akira3.png) no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	overflow: hidden;
+	background-position: center;
+}
+
+#main {
+	width: 100vw;
+	height: 100vh;
+	margin: 0 0;
+	padding: 2vh 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+div.page {
+	display: flex;
+	flex-direction: column;
+	width: 25vw;
+	padding-top: 15vh;
+}
+
+div#links {
+	order: 1;
+	-ms-transform: rotate(8deg);
+    -webkit-transform: rotate(8deg);
+    transform: rotate(8deg);
+	text-align: right;
+} 
+
+div#projects {
+	order: 0;
+	-ms-transform: rotate(-8deg);
+    -webkit-transform: rotate(-8deg);
+    transform: rotate(-8deg);
+	font-size: 3vw;
+}
+
+div.page a, span.header {
+	text-decoration: none;
+	font-size: 4vw;
+	-webkit-transition: color 0.5s linear;
+	-moz-transition: color 0.5s linear;
+	-o-transition: color 0.5s linear;
+	transition: color 0.5s linear;
+}
+
+div.page a {
+	color: #bbb;
+	font-family: 'Oswald', sans-serif;
+}
+
+div.page a:hover {
+	-webkit-filter: blur(0);
+	filter: blur(0);
+	color: #fff;
+}
+
+div#projects a {
+	font-size: smaller;
+}
+
+span {
+	cursor: default;
+	color: #fff;
+}
+
+span.header {
+	font-family: 'Oswald', sans-serif;
+}
+
+span.description {
+	font-size: 1vw;
+	color: #bbb;
+	font-family: Calibri, sans-serif;
+}

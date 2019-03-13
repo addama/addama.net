@@ -1,0 +1,11 @@
+main {
+	margin: 0 auto;
+	width: 50%;
+	border: 1px solid #000;
+}
+
+aside {
+	float: right;
+	width: 20%;
+	border: 1px solid #000;
+}
