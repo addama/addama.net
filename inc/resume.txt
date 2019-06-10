@@ -1,25 +1,78 @@
-ADDAMA SANDERS 
-addama.sanders@gmail.com 
-addama.net 
+﻿ADDAMA SANDERS 
+EMAIL: addama.sanders@gmail.com
+WEBSITE: addama.net 
+LINKEDIN: https://www.linkedin.com/in/addama-sanders-179a9881/
+ 
+WORK EXPERIENCE 
+ 
+Scrum Master at Tiger Sheep 
+​Oct 2017 - Oct 2018 
+Beaverton, OR 
+* Facilitated daily standups, sprint planning, backlog grooming, and retrospective meetings for one Scrum team 
+* Coached Agile values, shifting team and company focus to collaboration and continuous integration 
+* Achievements: Implemented Scrum, serving as Scrum Master to cut time to delivery from 1-3 months to 1-2 weeks with better overall quality and team engagement 
+ 
+Lead Software Developer at Tiger Sheep 
+​Sep 2014 - Oct 2018 
+Beaverton, OR 
+* Direct manager of 15 employees, overseeing day-to-day tasks, assignments, and conflict resolution 
+* Hired and trained cross-functional developer, support, and sales team 
+* Reported team, resource, and project status to senior management and CEO 
+* Managed over 100 successful team projects and upgrades for multi-million dollar companies such as Woodard Cleaning and Restoration, Global Electronics Services, and Oversea Casings 
+* Primary contact for new clients, often traveling on-site to gather client needs and determine scope and pricing of projects 
+* Created several proprietary Javascript tools and libraries enabling rapid development 
+ 
+Medical Systems Programmer in the US Air Force 
+Dec 2013 - Sep 2014 
+* Lead small team responsible for transitioning and updating 8 enterprise baselines to new platforms (IE10, ColdFusion10, .NET/C#, consolidated enterprise architecture overhaul) based on emerging requirements. 
+* Worked ahead of coding teams to test and fix potential errors presented by new technologies and techniques, passing these changes/knowledge back to streamline future development. 
+* Conceptualized and consolidated enterprise level reuse library. 
+* Created and lead junior servicemember mentorship seminars, attended by between 8 and 15 people, and consisted of between 1 and 3 panel members offering advice, answering questions, and providing valuable networking and public speaking experience. 
 
-ABOUT ME
-========
-Experienced technical leader and enthusiastic entry-level Scrum Master with a rich history of managing successful projects and mentoring successful people in both large, structured military settings as well as freeform startup environments. 
+Logistics Systems Programmer in the US Air Force 
+​Aug 2012 - Dec 2013 
+* Acted as Program Management Office (PMO) Configuration Management (CM) team  lead, technical developer lead, and database support technician for the Air Force's  primary deployment tool, the Logistics Module (LOGMOD). 
+* Maintained a nearly 15 year history of the program's efforts in digital and physical CM  repository. 
+* Generated, validated, and enforced Air Force Software Engineering Process documentation to track program progress and contract adherence. 
+ 
+Data Routing Technician in the US Air Force 
+Apr 2005 - Aug 2012 
+* Managed worldwide network of 33 UNIX-based data routing servers, ensuring  by-the-millisecond delivery of terabytes of weather data. 
+* Lead small team of subject-matter experts for Weather Product Management and  Distribution System (WPMDS) and related Java-based web service, on-call 24/7 to solve  complex data delivery issues from government, civilian, educational, and foreign  government agencies. 
+* Evaluated, tested, and reviewed new software platforms and products for enterprise  viability. 
+* Created scripts to add new functionality to legacy systems, modernize interfaces, and  entirely replace non-functioning capabilities. 
 
-QUALIFICATIONS
-==================
-Mentorship, Agile coaching, Technical leadership, Client communications, Conflict resolution, Culture engagement, Process improvement, Fostering openness, Effective training, Professional Scrum Master certification, SAP Business One frontend and database, Javascript, PHP, HTML5, CSS3/SASS, C#, T-SQL, MySQL, Perl, Regex, KSH 
-
-CERTIFICATIONS
-==============
-Professional Scrum Master I, Feb 2019 
-
-WORK HISTORY
-============
-Lead Software Developer at Tiger Sheep
-Sep 2014 - Oct 2018 
-Hired, trained, and mentored a tight-knit cross-functional team in the creation and maintenance of 100+ web, database, and administrative projects utilizing financial data from SAP Business One for diverse clients around the world. Conducted all supervisory and project management duties for on average 3-8 concurrent projects while maintaining my own project load. Guided company policy, introducing and enforcing Scrum framework and principles, cutting time to delivery from 1 month to 1-2 weeks compared to previous unstructured system with overall better code quality and team engagement.  
-
-Active Duty in the US Air Force
-Nov 2003 - Sep 2014
-Elevated to Team Leader in every position held, from weather data distribution to logistics software maintenance to medical software optimization, whether at home or while deployed. Regularly selected for high-profile duties and responsibilities, such as managing a fleet of 10+ vehicles, tracking and disposition of hundreds of thousands of dollars of equipment, and safeguarding Top Secret communications encryption data. Created and lead junior servicemember mentorship seminars, allowing younger IT professionals  the opportunity to speak to superiors and guest speakers in an informal, transparent, and honest setting.  
+Software Tester in the US Air Force 
+​Apr 2004 - Apr 2005 
+* Developed and maintained testing documentation for several baselines, working alongside coding teams to ensure all requirements are not only represented but testable and tested. 
+ 
+TECHNICAL SKILLS 
+* Professional Scrum Master certification 
+* SAP Business One frontend and database 
+* Microsoft Office Suite 
+* Windows, Unix, Linux, Mac 
+* Javascript 
+* PHP 
+* HTML5 
+* CSS3/SASS 
+* C# 
+* SQL 
+* Perl
+* Regex 
+* Jira 
+* Trello 
+* Git 
+ 
+CORE PROFICIENCIES 
+* Mentorship 
+* Agile coaching 
+* Technical leadership 
+* Client communications 
+* Conflict resolution 
+* Culture engagement 
+* Process improvement 
+* Fostering openness 
+* Effective training 
+ 
+CERTIFICATIONS 
+* Professional Scrum Master I, scrum.org
