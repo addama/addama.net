@@ -1,0 +1,141 @@
+:root {
+	--font-size: calc(1rem + (20 - 1) * (100vw - 400px) / (2000 - 400));
+		--hue: 10;
+	--sat: 30;
+	--light: 90;
+	--base-color: hsl(var(--hue), calc(var(--sat) * 1%), calc(var(--light) * 1%));
+}
+
+
+@font-face {
+	font-family: 'font';
+	src: url('../css/font/Quentin.otf');
+	/* src: url('font/TheAbsoluteBrush.otf'); */
+	/* src: url('font/Brushield.otf'); */
+}
+
+@font-face {
+	/* https://www.dafont.com/jenny-doodles.font?fpp=100&text=Projects */
+	font-family: 'doodle';
+	src: url('../css/font/Jenny Doodles.ttf');
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #fff;
+	width: 100vw;
+	font-size: 16px;
+	line-height: 1.44;
+	background-color: var(--base-color);
+	background-image: url('img/concrete-wall-3.png'), 
+	url('img/concrete-wall.png'),
+		radial-gradient(farthest-side at 50% 0, rgba(250, 250, 250, 1), transparent);
+		overflow-x: hidden;
+}
+
+#light {
+	background-image: radial-gradient(farthest-side at 50% 0, rgba(250, 250, 250, 0.4), transparent);
+	z-index: 5;
+	opacity: 0.5;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	background-repeat: round;
+	background-position: center;
+	position: absolute;
+}
+
+main {
+	color: #000;
+	text-align: justify;
+	padding: 3rem;
+	width: 80%;
+	margin: 0 auto;
+	font-size: var(--font-size);
+}
+
+a {
+	text-decoration: none;
+}
+
+section {
+	width: 100%;
+}
+
+article, figure {
+	/* border: 1px solid #f00; */
+	padding: 1em;
+	z-index: 1;
+}
+
+article a {
+	margin-bottom: 0;
+}
+
+article p {
+	font-size: smaller;
+	margin-top: 0;
+}
+
+div#figures {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+figure {
+	width: 30%;
+}
+
+figure img {
+	width: 100%;
+}
+
+figcaption {
+	/* font-size: 50%; */
+	color: #666;
+	line-height: 1em;
+	font-style: italic;
+	text-align: left;
+}
+
+header {
+	background-color: hsl(275, 100%, 32%);
+	background-image: url('img/felt.png');
+	border: 1px solid rgba(0, 0, 0, 0.25);
+	border-right: 1px solid rgba(50, 50, 50, 0.25);
+	border-top: 1px solid rgba(50, 50, 50, 0.25);
+	box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.1);
+	text-align: right;
+	padding: 1em;
+	color: rgba(0, 0, 0, 0.9);
+	font-family: 'font', 'Times New Roman', serif;
+	transform: rotate(-5deg);
+	z-index: 0;
+	margin-bottom: 2em;
+}
+
+header h1 {
+	pointer-events: none;
+}
+
+nav a {
+	font-family: 'doodle';
+	color: rgba(0, 0, 0, 0.9);
+	font-size: 2em;
+	position: absolute;
+	top: 25%;
+	left: 1em;
+	height: 50%;
+	width: 3em;
+	text-align: center;
+	text-shadow: -1px -1px 1px rgba(75, 75, 75, 0.4);
+}
+
+nav a:hover {
+	text-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
+	color: #000;
+}

@@ -1,0 +1,45 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #fff;
+}
+
+#main {
+	color: #000;
+	text-align: justify;
+	padding: 3rem;
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+.columns {
+	column-count: 2;
+	column-gap: 5em;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.item span {
+	display: block;
+}
+
+.skillTitle, .header {
+	font-weight: bold;
+	font-style: oblique;
+}
+
+.skillDefault {
+	text-align: left;
+}
+
+.item p, .skillDefault, .skillSubtitle, .skillPrereq {
+	font-size: smaller;
+}
+
+#warning {
+	color: red;
+	font-size: larger;
+}
