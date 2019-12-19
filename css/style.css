@@ -30,7 +30,7 @@ body {
 	width: 100vw;
 	height: 100vh;
 	background-color: var(--base-color);
-	background-image: url('img/concrete-wall-3.png'), 
+	background-image: url('img/concrete-wall.png'), 
 		radial-gradient(farthest-side at 50% 0, rgba(250, 250, 250, 1), transparent);
 	overflow: hidden;
 	display: flex;
@@ -73,8 +73,8 @@ body, #string, #marble, #fabric, #leather, #light, #dust {
 	height: 120vh;
 	width: 0.5em; 
 	background-color: hsl(0, 75%, 40%);
-	top: -10%;
-	left: 35%;
+	top: calc(-10% + var(--y, 0));
+	left: calc(35% + var(--x, 0));
 	transform: rotate(12deg);
 	filter: blur(0.6vh);
 	opacity: 0.98;
