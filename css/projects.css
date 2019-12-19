@@ -12,12 +12,14 @@
 	src: url('../css/font/Quentin.otf');
 	/* src: url('font/TheAbsoluteBrush.otf'); */
 	/* src: url('font/Brushield.otf'); */
+	font-display: swap;
 }
 
 @font-face {
 	/* https://www.dafont.com/jenny-doodles.font?fpp=100&text=Projects */
 	font-family: 'doodle';
 	src: url('../css/font/Jenny Doodles.ttf');
+	font-display: swap;
 }
 
 body {
@@ -52,7 +54,7 @@ main {
 	color: #000;
 	text-align: justify;
 	padding: 3rem;
-	width: 80%;
+	width: 50%;
 	margin: 0 auto;
 	font-size: var(--font-size);
 }

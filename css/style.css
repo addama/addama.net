@@ -13,12 +13,14 @@
 	src: url('font/Quentin.otf');
 	/* src: url('font/TheAbsoluteBrush.otf'); */
 	/* src: url('font/Brushield.otf'); */
+	font-display: swap;
 }
 
 @font-face {
 	/* https://www.dafont.com/jenny-doodles.font?fpp=100&text=Projects */
 	font-family: 'doodle';
 	src: url('font/Jenny Doodles.ttf');
+	font-display: swap;
 }
 
 html {
