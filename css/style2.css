@@ -5,6 +5,9 @@
 	--sat: 48;
 	--light: 89;
 	--base-color: hsl(var(--hue), calc(var(--sat) * 1%), calc(var(--light) * 1%));
+	--x: 0;
+	--x2: calc(var(--x, 0) * 0.9);
+	--x3: calc(var(--x, 0) * 0.7);
 }
 
 
@@ -34,7 +37,8 @@ body {
 	background-color: var(--base-color);
 	background-image: url('img/concrete-wall.png'), 
 		radial-gradient(farthest-side at 50% 0, rgba(250, 250, 250, 1), transparent);
-	background-size: cover;
+	background-size: cover !important;
+	background-position: left calc(0px - calc(var(--x, 0px) * 0.5)) top 0%, 0% 0% !important;
 	overflow: hidden;
 	display: flex;
 	justify-content: center;
@@ -44,7 +48,7 @@ body {
 }
 
 
-#string1, #string2, #marble, #fabric, #leather, #light, #dust {
+body, #string1, #string2, #marble, #fabric, #leather, #light, #dust {
 	background-repeat: round;
 	background-position: center;
 	position: absolute;
@@ -74,6 +78,7 @@ body {
 #string1, #string2, #string3 {
 	background-image: url('img/clean-gray-paper.png');
 	background-repeat: repeat;
+	/* background-position: center; */
 }
 
 #string3 {
@@ -81,9 +86,10 @@ body {
 	z-index: 7;
 	height: 0.6em;
 	width: 125vw; 
+	/* background-color: hsl(100, 80%, 30%); */
 	background-color: hsl(0, 80%, 30%);
 	top: -10%;
-	left: 50%;
+	left: calc(50% - calc(var(--x, 0) * 1.2));
 	transform: rotate(10deg);
 	filter: blur(0.9vh);
 	opacity: 0.93;
@@ -97,7 +103,7 @@ body {
 	width: 0.5em; 
 	background-color: hsl(0, 80%, 30%);
 	top: -10%;
-	left: 38%;
+	left: calc(38% - var(--x2, 0));
 	transform: rotate(12deg);
 	filter: blur(0.4vh);
 	opacity: 0.98;
@@ -109,9 +115,10 @@ body {
 	z-index: 4;
 	height: 0.4em;
 	width: 125vw; 
+	/* background-color: hsl(200, 80%, 30%); */
 	background-color: hsl(0, 80%, 30%);
 	top: -10%;
-	left: 0;
+	left: calc(0% - var(--x3, 0));
 	transform: rotate(33deg);
 	filter: blur(1px);
 	opacity: 0.99;
@@ -125,7 +132,7 @@ body {
 
 #fabric {
 	top: 20%;
-	left: 20%;
+	left: calc(20% - calc(var(--x, 0) * 0.5));
 	z-index: 2;
 	background-color: hsl(275, 100%, 32%);
 	background-image: url('img/felt.png');
@@ -147,12 +154,12 @@ body {
 	background-image: url('img/rocky-wall.png');
 	z-index: 1;
 	top: 25%;
-	left: 25%;
+	left: calc(25% - calc(var(--x, 0) * 0.5));
 }
 
 #leather {
 	top: 50%;
-	left: 20%;
+	left: calc(20% - calc(var(--x, 0) * 0.5));
 	z-index: 0;
 	min-width: 50%;
 	background-color: #321;
