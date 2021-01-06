@@ -8,8 +8,10 @@ body {
 	color: #000;
 	text-align: justify;
 	padding: 3rem;
-	max-width: 1024px;
+	max-width: 800px;
 	margin: 0 auto;
+	font-size: 5mm;
+	line-height: 1.44;
 }
 
 .columns {
@@ -42,4 +44,12 @@ body {
 #warning {
 	color: red;
 	font-size: larger;
+}
+
+h1 {
+	margin-top: 2em;
+}
+
+h2 {
+	margin-top: 1em;
 }

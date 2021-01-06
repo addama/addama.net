@@ -1,40 +1,63 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html>
 	<head>
 		<title>addama.net</title>
-		<link rel='stylesheet' type='text/css' href='css/style.css' />
-		<meta name='description' content='Personal website for Addama Sanders' />
-		<meta name='keywords' content='addama, developer, web designer, personal site, sanders' />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel='stylesheet' href='./css/style.css' />
 	</head>
-	<body role='main'>
-		<div id='light'></div>
-		<div id='string1'></div>
-		<div id='string2'></div>
-		<div id='string3'></div>
-		<div id='dust'></div>
-		<div id='fabric'>
-			<i class='scribble1'>&#167;</i>
-			<i class='scribble2'>&#167;</i>
-			<i class='stars'>s</i>
-			<i class='star'>h</i>
-			<i class='spiral'>W</i>
-			<i class='face'>H</i>
-			<i class='arrow'>/</i>
-			<i class='ex1'>U</i>
-			<i class='ex2'>U</i>
-			<i class='ex3'>U</i>
-			<i class='ex4'>U</i>
-			<i class='ex5'>U</i>
-			<nav>
-				<a href='https://www.linkedin.com/in/addama-sanders-179a9881' title='Linkedin profile'>Linkedin</a>
-				<a href='https://github.com/addama' title='Github profile'>Github</a>
-				<a href='https://www.instagram.com/addama.sanders/' title='Instagram profile'>Instagram</a>
-				<a href='http://steamcommunity.com/id/addama' title='Steam profile'>Steam</a>
-				<a href='./projects/' title='Projects'>Projects</a>
-			</nav>
+	<body onclick='flipCard()'>
+		<div id='card'>
+			<div id='cardBody'>
+				<div id='cardFront'>
+					<span id='glyph'>i</span>
+					<div id='stripe'>
+						<span id='name'>Addama Sanders</span>
+						<span id='tagline'>Developer, Designer, Human, Friend</span>
+					</div>
+				</div>
+				<div id='cardBack'>
+					<nav>
+						<a href='https://github.com/addama' title='Github Profile'>
+							<span class='icon' alt='Github icon'>V</span>
+						</a>
+						<a href='http://steamcommunity.com/id/addama' title='Steam Profile'>
+							<span class='icon' alt='Steam icon'>"</span>
+						</a>
+						<a href='https://www.instagram.com/addama.sanders/' title='Instagram Profile'>
+							<span class='icon' alt='Instagram icon'>c</span>
+						</a>
+						<a href='https://linkedin.com/in/addama' title='LinkedIn Profile'>
+							<span class='icon' alt='LinkedIn icon'>i</span>
+						</a>
+						<a id='projectsLink' href='./projects/' title='Projects'>Projects</a>
+					</nav>
+					<div id='fingerprint'>
+						<img src='img/fingerprint.png' />
+					</div>
+				</div>
+			</div>
 		</div>
-		<div id='marble'></div>
-		<div id='leather'></div>
+		<div id='spotlight'></div>
+		<div id='vignette'></div>
+		<div id='subtitle'>
+			<span id='message'>What's this... a business card? I wonder who it belongs to...</span><span id='triangle'></span>
+		</div>
+		<script type='text/javascript'>
+			function flipCard() {
+				let message1 = 'What\'s this... a business card? I wonder who it belongs to...';
+				let message2 = '... "Addama"? Never heard of him.';
+				let card = document.getElementById('cardBody');
+				let message = document.getElementById('message');
+				let target = event.target;
+
+				if (card.classList.contains('flipped')) {
+					message.innerHTML = message1;
+				} else {
+					if (target.matches('body')) return;
+					message.innerHTML = message2;
+				}
+				
+				card.classList.toggle('flipped');
+			}
+		</script>
 	</body>
 </html>
