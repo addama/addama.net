@@ -1,63 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang='en'>
 	<head>
+		<meta charset='utf-8' />
+		<meta name='viewport' content='width=device-width, initial-scale=1' />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap&text=GITHUBLNKDEPROJCTSBgithublnkdeprojctsb" rel="stylesheet">
+		<link rel='stylesheet' href='style.css' />
 		<title>addama.net</title>
-		<link rel='stylesheet' href='./css/style.css' />
 	</head>
-	<body onclick='flipCard()'>
-		<div id='card'>
-			<div id='cardBody'>
-				<div id='cardFront'>
-					<span id='glyph'>i</span>
-					<div id='stripe'>
-						<span id='name'>Addama Sanders</span>
-						<span id='tagline'>Developer, Designer, Human, Friend</span>
-					</div>
-				</div>
-				<div id='cardBack'>
-					<nav>
-						<a href='https://github.com/addama' title='Github Profile'>
-							<span class='icon' alt='Github icon'>V</span>
-						</a>
-						<a href='http://steamcommunity.com/id/addama' title='Steam Profile'>
-							<span class='icon' alt='Steam icon'>"</span>
-						</a>
-						<a href='https://www.instagram.com/addama.sanders/' title='Instagram Profile'>
-							<span class='icon' alt='Instagram icon'>c</span>
-						</a>
-						<a href='https://linkedin.com/in/addama' title='LinkedIn Profile'>
-							<span class='icon' alt='LinkedIn icon'>i</span>
-						</a>
-						<a id='projectsLink' href='https://projects.addama.net' title='Projects'>Projects</a>
-					</nav>
-					<div id='fingerprint'>
-						<img src='img/fingerprint.png' />
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id='spotlight'></div>
-		<div id='vignette'></div>
-		<div id='subtitle'>
-			<span id='message'>What's this... a business card? I wonder who it belongs to...</span><span id='triangle'></span>
-		</div>
-		<script type='text/javascript'>
-			function flipCard() {
-				let message1 = 'What\'s this... a business card? I wonder who it belongs to...';
-				let message2 = '... "Addama"? Never heard of him.';
-				let card = document.getElementById('cardBody');
-				let message = document.getElementById('message');
-				let target = event.target;
-
-				if (card.classList.contains('flipped')) {
-					message.innerHTML = message1;
-				} else {
-					if (target.matches('body')) return;
-					message.innerHTML = message2;
-				}
-				
-				card.classList.toggle('flipped');
-			}
-		</script>
+	<body class='noisy'>
+		<img id='shape' alt='A multi-colored hexagon beating like a heart in the foreground' src='neon.svg' />
+		<img id='confetti' alt='A field of barely visible shapes rotating in the black background' src='confetti.svg' />
+		<main>
+			<nav>
+				<a href='https://github.com/addama'>Github</a>
+				<a href='https://linkedin.com/in/addama'>LinkedIn</a>
+				<a href='https://projects.addama.net'>Projects</a>
+				<a href='http://recipes.addama.net'>Cookbook</a>
+			</nav>
+		</main>
 	</body>
 </html>

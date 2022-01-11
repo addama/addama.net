@@ -1,0 +1,202 @@
+@keyframes heartbeat {
+	0%	{	
+		transform: scale(100%) rotate(0deg); 
+		filter: contrast(100%);
+	}
+	10% {	
+		transform: scale(100.75%) rotate(0.75deg);
+		filter: contrast(175%);
+	}
+	20% {
+		transform: scale(100%) rotate(0deg);
+		filter: contrast(130%);
+	}
+	30% {	
+		transform: scale(100.5%) rotate(-0.5deg);
+		filter: contrast(150%);
+	}
+ 	40% {
+		transform: scale(100%) rotate(0deg); 
+		filter: contrast(140%);	
+	}
+	50% {
+		transform: scale(100%) rotate(0deg); 
+		filter: contrast(130%);	
+	}
+	60% {
+		transform: scale(100%) rotate(0deg); 
+		filter: contrast(130%);	
+	}
+	70% {
+		transform: scale(100%) rotate(0deg); 
+		filter: contrast(120%);	
+	}
+	80% {
+		transform: scale(100%) rotate(0deg); 
+		filter: contrast(110%);	
+	}
+	90% {
+		transform: scale(100%) rotate(0deg); 
+		filter: contrast(100%);	
+	}
+}
+
+@keyframes spin {
+	0%	 {	transform: rotate(0deg);	}
+	100% {	transform: rotate(360deg);	}
+}
+
+@keyframes blood {
+	0%	{
+		filter: opacity(89%);
+	}
+	10% {
+		filter: opacity(100%);
+	}
+	20% {
+		filter: opacity(90%);
+	}
+	30% {	
+		filter: opacity(98%);
+	}
+ 	40% {
+		filter: opacity(98%);
+	}
+ 	50% {
+		filter: opacity(98%);
+	}
+ 	60% {
+		filter: opacity(95%);
+	}
+ 	70% {
+		filter: opacity(95%);
+	}
+ 	80% {
+		filter: opacity(92%);
+	}
+ 	90% {
+		filter: opacity(92%);
+	}
+ 	100% {
+		filter: opacity(89%);
+	}
+}
+
+@keyframes breathe {
+	from {
+		filter: hue-rotate(0deg);
+	}
+	to {
+		filter: hue-rotate(360deg);
+	}
+}
+
+html {
+	overflow: hidden;
+}
+
+body {
+	background-color: #000;
+	margin: 0px;
+	padding: 0px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+	animation: 8s ease-in-out infinite alternate breathe;
+}
+
+#shape, #confetti {
+	position: fixed;
+	bottom: -50%;
+	right: -20%;
+	width: 2048px;
+	pointer-events: none;
+	display: block;
+}
+
+#shape {
+	animation: 1.2s ease-in-out infinite heartbeat;
+}
+
+#confetti {
+	animation: 300s linear infinite spin;
+}
+
+main {
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+	margin: 0px;
+	display: flex;
+	align-items: flex-end;
+	overflow: hidden;
+}
+
+nav {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	flex-direction: column;
+	position: relative;
+	margin: 3vmax 4vmax;
+}
+
+nav a {
+	font-family: 'Gugi', sans-serif;
+	color: rgb(250,200,250);
+	text-decoration: none;
+	font-size: 5vmax;
+	animation: 1.2s ease-in-out infinite blood;
+	text-shadow: 0px 0px 5px rgba(0,0,0,1), 0px 0px 10px rgba(0,0,0,1), 0px 0px 15px rgba(0,0,0,1);
+	line-height: 1em;
+	animation-delay: 0.2s;
+}
+
+nav a:hover {
+	color: #fff !important;
+	/* text-transform: uppercase; */
+}
+
+.noisy {
+	background: #000 url(noise.svg);
+}
+
+@media only screen and (orientation: landscape) and (max-width: 1280px) {
+	#shape, #confetti {
+		top: -75%;
+		right: -50%;
+		width: 200vmax;
+	}
+}
+
+@media only screen and (orientation: landscape) and (max-width: 1024px) {
+	#shape, #confetti {
+		top: -75%;
+		right: -50%;
+		width: 150vmax;
+	}
+}
+
+@media only screen and (orientation: portrait) and (max-width: 1024px) {
+	#shape, #confetti {
+		top: -75%;
+		right: -80%;
+		width: 200vmax;
+	}
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	#shape, #confetti, body, nav a {
+		animation: none;
+	}
+
+	nav a {
+		color: #fff;
+	}
+}
