@@ -105,6 +105,8 @@ a {
 	font-weight: bold;
 	color: var(--highlight-color);
 	filter: brightness(100%) hue-rotate(var(--hue-rotate));
+	transition: all 2s ease-in;  
+	text-decoration: none;
 }
 
 a:hover {
@@ -154,6 +156,7 @@ h1 {
 	url("data:image/svg+xml,%3Csvg viewBox='0 0 1920 500' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.01' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 	mix-blend-mode: screen;
 	filter: contrast(150%) brightness(650%) hue-rotate(var(--hue-rotate));
+	transition: all 2s cubic-bezier(.29, 1.01, 1, -0.68); 
 }
 
 h2 {
@@ -220,6 +223,7 @@ img.icon_wide {
 	filter: none !important;
 }
 
+/*
 .noise {
 	width: 5vw;
 	max-width: min(var(--text-width), 8vw);
@@ -235,3 +239,4 @@ img.icon_wide {
 	filter: contrast(150%) brightness(650%) invert(100%);
 	mix-blend-mode: screen;
 }
+*/
